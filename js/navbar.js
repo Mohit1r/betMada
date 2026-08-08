@@ -222,9 +222,26 @@ export class Navbar {
         }
 
         @media (max-width: 992px) {
-          .nav-menu { display: none; }
+          .nav-menu { 
+            display: none; 
+            position: absolute;
+            top: 76px;
+            left: 0;
+            width: 100%;
+            background: rgba(18, 7, 32, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-purple);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            gap: 1.25rem;
+          }
+          .nav-menu.mobile-active {
+            display: flex;
+          }
           .mobile-toggle { display: flex; }
           .live-stream-title { font-size: 0.75rem; }
+          .nav-actions .copy-promo-btn { display: none; } /* Hide big copy btn on mobile navbar to save space */
         }
       </style>
     `;
@@ -268,6 +285,21 @@ export class Navbar {
       xNavBtn.addEventListener('click', () => {
         sounds.playClick();
         window.open('https://x.com', '_blank');
+      });
+    }
+
+    // Mobile Menu Toggle logic
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    if (mobileBtn && navMenu) {
+      mobileBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('mobile-active');
+      });
+      // Close mobile menu when a link is clicked
+      navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('mobile-active');
+        });
       });
     }
   }

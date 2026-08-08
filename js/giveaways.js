@@ -106,23 +106,25 @@ export class Giveaways {
                 <a href="leaderboard.html" class="badge badge-purple font-mono" style="text-decoration: none;">FULL PAGE &rarr;</a>
               </div>
 
-              <div class="leaderboard-table">
-                <div class="table-head">
-                  <span>RANK</span>
-                  <span>PLAYER</span>
-                  <span>WAGERED</span>
-                  <span>PRIZE</span>
-                </div>
+              <div class="table-responsive-wrapper">
+                <div class="leaderboard-table">
+                  <div class="table-head">
+                    <span>RANK</span>
+                    <span>PLAYER</span>
+                    <span>WAGERED</span>
+                    <span>PRIZE</span>
+                  </div>
 
-                <div class="table-body">
-                  ${leaderboardData.map(item => `
-                    <div class="table-row ${item.rank <= 3 ? 'top-three' : ''}">
-                      <span class="rank-col font-mono">${item.rank === 1 ? '🥇' : item.rank === 2 ? '🥈' : item.rank === 3 ? '🥉' : ''} #${item.rank}</span>
-                      <span class="user-col font-mono">${Giveaways.maskUsername(item.user)}</span>
-                      <span class="wager-col font-mono">${item.wager}</span>
-                      <span class="prize-col font-mono text-stake">${item.prize}</span>
-                    </div>
-                  `).join('')}
+                  <div class="table-body">
+                    ${leaderboardData.map(item => `
+                      <div class="table-row ${item.rank <= 3 ? 'top-three' : ''}">
+                        <span class="rank-col font-mono">${item.rank === 1 ? '🥇' : item.rank === 2 ? '🥈' : item.rank === 3 ? '🥉' : ''} #${item.rank}</span>
+                        <span class="user-col font-mono">${Giveaways.maskUsername(item.user)}</span>
+                        <span class="wager-col font-mono">${item.wager}</span>
+                        <span class="prize-col font-mono text-stake">${item.prize}</span>
+                      </div>
+                    `).join('')}
+                  </div>
                 </div>
               </div>
 
@@ -251,6 +253,22 @@ export class Giveaways {
           justify-content: space-between;
           font-size: 0.85rem;
           color: var(--text-secondary);
+        }
+
+        .table-responsive-wrapper {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        @media (max-width: 768px) {
+          .leaderboard-card { padding: 1.25rem 0; }
+          .leaderboard-header { padding-left: 1.25rem; padding-right: 1.25rem; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+          .table-head, .table-row { min-width: 480px; padding-left: 1.25rem; padding-right: 1.25rem; }
+          .leaderboard-footer { padding-left: 1.25rem; padding-right: 1.25rem; flex-direction: column; gap: 1rem; align-items: stretch; text-align: center; }
+          .card-btn-row { flex-direction: column; }
+          .card-top-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+          .giveaway-card { padding: 1.25rem; }
         }
       </style>
     `;

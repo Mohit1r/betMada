@@ -179,28 +179,30 @@ export class LeaderboardPage {
 
             <!-- Main Leaderboard Table Card -->
             <div class="glass-card lb-table-card">
-              <div class="lb-table-header">
-                <span class="col-rank">RANK</span>
-                <span class="col-user">STAKE PLAYER (MASKED)</span>
-                <span class="col-wager">MONTHLY WAGERED</span>
-                <span class="col-prize">PRIZE PAYOUT</span>
-              </div>
+              <div class="table-responsive-wrapper">
+                <div class="lb-table-header">
+                  <span class="col-rank">RANK</span>
+                  <span class="col-user">STAKE PLAYER (MASKED)</span>
+                  <span class="col-wager">MONTHLY WAGERED</span>
+                  <span class="col-prize">PRIZE PAYOUT</span>
+                </div>
 
-              <div class="lb-table-body" id="lb-table-body">
-                ${tableData.map(item => `
-                  <div class="lb-table-row" data-rank="${item.rank}" data-rawname="${item.user.toLowerCase()}" data-maskedname="${LeaderboardPage.maskUsername(item.user).toLowerCase()}">
-                    <span class="col-rank font-mono">
-                      <span class="rank-badge">
-                        #${item.rank}
+                <div class="lb-table-body" id="lb-table-body">
+                  ${tableData.map(item => `
+                    <div class="lb-table-row" data-rank="${item.rank}" data-rawname="${item.user.toLowerCase()}" data-maskedname="${LeaderboardPage.maskUsername(item.user).toLowerCase()}">
+                      <span class="col-rank font-mono">
+                        <span class="rank-badge">
+                          #${item.rank}
+                        </span>
                       </span>
-                    </span>
-                    <span class="col-user">
-                      <strong class="user-name font-mono">${LeaderboardPage.maskUsername(item.user)}</strong>
-                    </span>
-                    <span class="col-wager font-mono">$${item.wager.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-                    <span class="col-prize font-mono text-stake">$${item.prize.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-                  </div>
-                `).join('')}
+                      <span class="col-user">
+                        <strong class="user-name font-mono">${LeaderboardPage.maskUsername(item.user)}</strong>
+                      </span>
+                      <span class="col-wager font-mono">$${item.wager.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
+                      <span class="col-prize font-mono text-stake">$${item.prize.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
+                    </div>
+                  `).join('')}
+                </div>
               </div>
             </div>
 
@@ -521,6 +523,11 @@ export class LeaderboardPage {
           background: rgba(18, 7, 32, 0.95);
           border: 1.5px solid var(--border-purple);
         }
+        .table-responsive-wrapper {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
         .lb-table-header {
           display: grid;
           grid-template-columns: 0.8fr 1.5fr 1.2fr 1.2fr;
@@ -573,11 +580,14 @@ export class LeaderboardPage {
         .lb-info-card p { font-size: 0.88rem; color: var(--text-secondary); }
 
         @media (max-width: 992px) {
-          .podium-container { flex-direction: column; align-items: stretch; }
-          .podium-gold { order: 1; transform: scale(1); margin-bottom: 0; }
-          .podium-silver { order: 2; }
-          .podium-bronze { order: 3; }
-          .lb-table-header, .lb-table-row { grid-template-columns: 0.8fr 1.2fr 1fr 1fr; }
+          .podium-container { flex-direction: column; align-items: center; gap: 1rem; }
+          .podium-card { border-radius: 12px !important; border-bottom: 2px solid auto !important; width: 100%; max-width: 400px; padding-bottom: 0; }
+          .podium-gold { order: 1; transform: scale(1); margin-bottom: 0; border-bottom: 5px solid var(--cash-gold) !important; }
+          .podium-silver { order: 2; border-bottom: 4px solid #cbd5e1 !important; }
+          .podium-bronze { order: 3; border-bottom: 4px solid #f97316 !important; }
+          
+          .lb-table-card { padding: 1rem 0; } /* Remove side padding so scroll goes to edge */
+          .lb-table-header, .lb-table-row { min-width: 600px; padding-left: 1rem; padding-right: 1rem; }
           .lb-race-stats { flex-direction: column; gap: 1rem; }
           .lb-stat-divider { display: none; }
         }

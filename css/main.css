@@ -488,5 +488,15 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 @media (max-width: 768px) {
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  
+  /* Global typography scaling */
   .section-title { font-size: 1.75rem; }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  
+  /* Container padding */
+  .container { padding: 0 1rem; }
+  
+  /* Utilities */
+  .btn { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
 }

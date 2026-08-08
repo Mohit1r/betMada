@@ -361,6 +361,11 @@ export class Hero {
           .hero-code-box { flex-direction: column; text-align: center; }
           .hero-stats { justify-content: space-around; width: 100%; }
         }
+        @media (max-width: 768px) {
+          .hero-title { font-size: 2rem !important; }
+          .hero-cta-group { flex-direction: column; width: 100%; }
+          .hero-cta-group .btn { width: 100%; margin: 0; }
+        }
       </style>
     `;
   }
