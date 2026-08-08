@@ -253,6 +253,14 @@ export class VipCalculator {
         @media (max-width: 992px) {
           .calc-grid { grid-template-columns: 1fr; }
         }
+        @media (max-width: 768px) {
+          .calculator-card { padding: 1.25rem; }
+          .results-grid { grid-template-columns: 1fr; }
+          .total-result-box { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1rem; }
+          .tier-grid { grid-template-columns: repeat(2, 1fr); }
+          .calc-results { padding: 1.25rem; }
+          .control-label-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+        }
       </style>
     `;
   }

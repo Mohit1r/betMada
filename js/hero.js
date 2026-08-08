@@ -365,6 +365,11 @@ export class Hero {
           .hero-title { font-size: 2rem !important; }
           .hero-cta-group { flex-direction: column; width: 100%; }
           .hero-cta-group .btn { width: 100%; margin: 0; }
+          .code-actions { flex-direction: column; width: 100%; }
+          .code-actions .btn { width: 100%; }
+          .hero-stats { flex-direction: column; gap: 1rem; }
+          .stat-divider { display: none; }
+          .social-drop-cards { flex-direction: column; }
         }
       </style>
     `;

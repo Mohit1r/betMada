@@ -470,19 +470,21 @@ export class LeaderboardPage {
 
         /* Controls bar */
         .lb-controls-bar {
-          padding: 1rem 1.5rem;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 1.5rem;
+          padding: 1rem 1.5rem;
           margin-bottom: 1.5rem;
           background: rgba(18, 7, 32, 0.85);
           border: 1px solid var(--border-purple);
         }
         .search-input-wrap {
           position: relative;
-          flex-grow: 1;
-          max-width: 400px;
+          width: 320px;
+        }
+        @media (max-width: 768px) {
+          .lb-controls-bar { flex-direction: column; gap: 1rem; padding: 1rem; align-items: stretch; }
+          .search-input-wrap { width: 100%; }
         }
         .search-icon {
           position: absolute;

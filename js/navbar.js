@@ -268,6 +268,11 @@ export class Navbar {
         @media (max-width: 768px) {
           .mobile-toggle { display: none !important; }
           .nav-menu.mobile-active { display: none !important; }
+          .live-bar-container { flex-direction: column; gap: 0.75rem; text-align: center; padding: 0.5rem 0; }
+          .live-status { flex-direction: column; gap: 0.5rem; }
+          .live-stream-title { white-space: normal; overflow: visible; font-size: 0.75rem; }
+          .brand-text { font-size: 1.3rem; }
+          .nav-actions { gap: 0.5rem; }
         }
       </style>
     `;
