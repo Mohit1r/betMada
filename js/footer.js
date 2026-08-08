@@ -21,7 +21,7 @@ export class Footer {
                 BetMada is an official affiliate platform and community hub for Stake.com. We provide exclusive promo code bonuses, daily Discord cash drops, weekly X giveaways, and monthly wager races.
               </p>
               <div class="social-links">
-                <a href="https://discord.com" target="_blank" class="social-btn" title="Discord">💬 Discord</a>
+                <a href="https://discord.gg/mada" target="_blank" class="social-btn" title="Discord">💬 Discord</a>
                 <a href="https://twitter.com" target="_blank" class="social-btn" title="Twitter / X">🐦 X (Twitter)</a>
                 <a href="https://telegram.org" target="_blank" class="social-btn" title="Telegram">✈️ Telegram</a>
               </div>

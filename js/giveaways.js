@@ -55,7 +55,7 @@ export class Giveaways {
                   <button class="btn btn-discord giveaway-entry-btn" data-type="discord" data-title="Daily Discord Cash Drop">
                     Verify Code BETMADA & Enter Drop
                   </button>
-                  <a href="https://discord.com" target="_blank" class="btn btn-glass">Join Discord Server</a>
+                  <a href="https://discord.gg/mada" target="_blank" class="btn btn-glass">Join Discord Server</a>
                 </div>
               </div>
 

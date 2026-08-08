@@ -376,7 +376,7 @@ export class Hero {
     if (discordBtn) {
       discordBtn.addEventListener('click', () => {
         sounds.playClick();
-        window.open('https://discord.com', '_blank');
+        window.open('https://discord.gg/mada', '_blank');
       });
     }
 
