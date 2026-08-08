@@ -67,6 +67,26 @@ export class Navbar {
         </div>
       </div>
 
+      <!-- Mobile App Bottom Navigation Bar -->
+      <nav class="bottom-nav-bar" id="bottom-nav">
+        <a href="index.html" class="bottom-nav-item" data-path="index.html">
+          <span class="bottom-nav-icon">🏠</span>
+          <span class="bottom-nav-label">Home</span>
+        </a>
+        <a href="index.html#promos" class="bottom-nav-item" data-path="index.html#promos">
+          <span class="bottom-nav-icon">🎁</span>
+          <span class="bottom-nav-label">Bonuses</span>
+        </a>
+        <a href="index.html#giveaways" class="bottom-nav-item" data-path="index.html#giveaways">
+          <span class="bottom-nav-icon">💬</span>
+          <span class="bottom-nav-label">Drops</span>
+        </a>
+        <a href="leaderboard.html" class="bottom-nav-item" data-path="leaderboard.html">
+          <span class="bottom-nav-icon">👑</span>
+          <span class="bottom-nav-label">Race</span>
+        </a>
+      </nav>
+
       <style>
         .navbar-wrapper {
           position: sticky;
@@ -243,6 +263,12 @@ export class Navbar {
           .live-stream-title { font-size: 0.75rem; }
           .nav-actions .copy-promo-btn { display: none; } /* Hide big copy btn on mobile navbar to save space */
         }
+        
+        /* Under 768px (Mobile phones) use bottom nav bar instead of hamburger */
+        @media (max-width: 768px) {
+          .mobile-toggle { display: none !important; }
+          .nav-menu.mobile-active { display: none !important; }
+        }
       </style>
     `;
   }
@@ -288,7 +314,7 @@ export class Navbar {
       });
     }
 
-    // Mobile Menu Toggle logic
+    // Mobile Menu Toggle logic (for tablets)
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
     if (mobileBtn && navMenu) {
@@ -302,5 +328,15 @@ export class Navbar {
         });
       });
     }
+
+    // Set Active State for Bottom Nav Bar
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+    bottomNavItems.forEach(item => {
+      const itemPath = item.getAttribute('data-path');
+      if (itemPath === currentPath) {
+        item.classList.add('active');
+      }
+    });
   }
 }

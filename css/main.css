@@ -98,7 +98,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Typography Utility */
@@ -108,6 +108,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   line-height: 1.2;
 }
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+p { font-size: clamp(0.9rem, 2vw, 1rem); }
 
 .text-gradient-purple {
   background: linear-gradient(135deg, #ffffff 0%, #c084fc 50%, #a855f7 100%);
@@ -488,16 +493,70 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 @media (max-width: 768px) {
-  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; gap: 1rem; }
   
   /* Global typography scaling */
   .section-title { font-size: 1.75rem; }
-  h1 { font-size: 2rem !important; }
-  h2 { font-size: 1.5rem !important; }
   
   /* Container padding */
   .container { padding: 0 1rem; }
   
   /* Utilities */
   .btn { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
+  
+  /* Add padding to bottom so content isn't hidden by bottom nav */
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+/* Bottom Nav Bar (Mobile App UI) */
+.bottom-nav-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(18, 7, 32, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid var(--border-purple);
+  z-index: 1000;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  gap: 4px;
+  width: 25%;
+  height: 100%;
+  transition: color var(--transition-fast);
+}
+
+.bottom-nav-item.active {
+  color: var(--neon-purple);
+}
+
+.bottom-nav-icon {
+  font-size: 1.4rem;
+}
+
+.bottom-nav-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav-bar {
+    display: flex;
+  }
 }
