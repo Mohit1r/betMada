@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetMada $25,000 Wager Race Leaderboard | Stake Affiliate Community</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Check live standings for the BetMada $25,000 VIP Monthly Wager Race. Top 50 community wagers using Stake code BETMADA win direct crypto payouts!">
+  <meta name="keywords" content="BetMada leaderboard, Stake wager race, $25K leaderboard, Stake promo code BETMADA">
+  
+  <!-- Favicon Image -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Main Root Container -->
+  <div id="app"></div>
+
+  <!-- Dedicated Leaderboard JavaScript Module -->
+  <script type="module">
+    import { LeaderboardPage } from './js/leaderboardPage.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('app');
+      if (root) {
+        root.innerHTML = LeaderboardPage.render();
+        LeaderboardPage.attachEvents();
+      }
+    });
+  </script>
+
+</body>
+</html>
