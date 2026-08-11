@@ -36,7 +36,7 @@ export class Hero {
                 <span class="code-val font-mono">BETMADA</span>
               </div>
               <div class="code-actions">
-                <button class="btn btn-primary copy-promo-btn" data-code="BETMADA">
+                <button class="btn btn-primary copy-promo-btn" data-code="MADA">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -108,7 +108,7 @@ export class Hero {
                       <span class="badge badge-discord">💬 DISCORD DAILY</span>
                       <span class="mini-drop-val font-mono">$1,000.00</span>
                     </div>
-                    <span class="mini-drop-title">Exclusive Code BETMADA Rain</span>
+                    <span class="mini-drop-title">Exclusive Code MADA Rain</span>
                     <span class="mini-drop-sub">Active in #code-users channel</span>
                   </div>
 
@@ -129,10 +129,10 @@ export class Hero {
                   <img src="assets/logo.jpg" class="footer-mascot-avatar">
                   <div class="profile-details">
                     <span class="profile-name">BETMADA Community Hub</span>
-                    <span class="profile-sub">Code: BETMADA Verified</span>
+                    <span class="profile-sub">Code: MADA Verified</span>
                   </div>
                 </div>
-                <button class="btn btn-sm btn-glass copy-promo-btn" data-code="BETMADA">Code: BETMADA</button>
+                <button class="btn btn-sm btn-glass copy-promo-btn" data-code="MADA">Code: MADA</button>
               </div>
             </div>
           </div>
@@ -417,7 +417,7 @@ export class Hero {
               <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start;">
                 <span class="font-mono" style="background: var(--neon-purple); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">2</span>
                 <div>
-                  <strong style="color: #fff;">Enter Code "BETMADA" in Code Box</strong>
+                  <strong style="color: #fff;">Enter Code "MADA" in Code Box</strong>
                   <p style="font-size: 0.85rem; color: var(--text-muted);">Check "Code (Optional)" during signup and enter <b>BETMADA</b>.</p>
                 </div>
               </div>
@@ -429,7 +429,7 @@ export class Hero {
                 </div>
               </div>
             </div>
-            <a href="https://stake.com/?c=BETMADA" target="_blank" class="btn btn-stake btn-lg" style="width: 100%;">
+            <a href="https://stake.com/?c=MADA" target="_blank" class="btn btn-stake btn-lg" style="width: 100%;">
               Go to Stake & Register with BETMADA
             </a>
           </div>

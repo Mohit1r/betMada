@@ -46,14 +46,14 @@ export class Giveaways {
                   <span class="badge badge-discord">💬 DAILY DISCORD DROPS</span>
                   <span class="giveaway-prize text-gradient-discord font-mono">$1,000 / DAY</span>
                 </div>
-                <h4 class="giveaway-title">Exclusive Code BETMADA Discord Drops</h4>
+                <h4 class="giveaway-title">Exclusive Code MADA Discord Drops</h4>
                 <p class="giveaway-desc">Multiple daily cash rains credited directly into Stake vault for verified users who signed up with code <strong>BETMADA</strong>.</p>
                 <div class="giveaway-meta">
                   <span>🔒 Requirement: Stake account registered with code <b>BETMADA</b> + Discord Member</span>
                 </div>
                 <div class="card-btn-row">
                   <button class="btn btn-discord giveaway-entry-btn" data-type="discord" data-title="Daily Discord Cash Drop">
-                    Verify Code BETMADA & Enter Drop
+                    Verify Code MADA & Enter Drop
                   </button>
                   <a href="https://discord.gg/mada" target="_blank" class="btn btn-glass">Join Discord Server</a>
                 </div>
@@ -288,7 +288,7 @@ export class Giveaways {
             </div>
             <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">${title} Entry</h3>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-              Provide your details below. Entries are verified against Stake promo code <b>BETMADA</b>.
+              Provide your details below. Entries are verified against Stake promo code <b>MADA</b>.
             </p>
 
             <form id="giveaway-form" onsubmit="window.handleGiveawaySubmit(event, '${type}')">
@@ -303,7 +303,7 @@ export class Giveaways {
               </div>
 
               <button type="submit" class="btn ${type === 'discord' ? 'btn-discord' : type === 'x' ? 'btn-x' : 'btn-primary'} btn-lg" style="width: 100%;">
-                Submit Entry & Verify Code BETMADA
+                Submit Entry & Verify Code MADA
               </button>
             </form>
           </div>
@@ -317,7 +317,7 @@ export class Giveaways {
       const masked = Giveaways.maskUsername(rawUser);
       sounds.playCopy();
       ModalManager.close();
-      ModalManager.showToast(`🎉 Entry verified for "${masked}" under code BETMADA! Check your ${type === 'x' ? 'X DMs' : 'Discord channel'} for drop confirmation.`);
+      ModalManager.showToast(`🎉 Entry verified for "${masked}" under code MADA! Check your ${type === 'x' ? 'X DMs' : 'Discord channel'} for drop confirmation.`);
     };
   }
 }

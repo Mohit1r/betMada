@@ -52,10 +52,10 @@ export class StakeReview {
                 Sign up on Stake.com using code <strong class="text-purple font-mono">BETMADA</strong> to activate instant rakeback, reload rewards, and entry into daily Discord drops.
               </p>
               <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <button class="btn btn-stake btn-lg copy-promo-btn" data-code="BETMADA">
-                  <span>Copy Code: BETMADA</span>
+                <button class="btn btn-stake btn-lg copy-promo-btn" data-code="MADA">
+                  <span>Copy Code: MADA</span>
                 </button>
-                <a href="https://stake.com/?c=BETMADA" target="_blank" class="btn btn-primary btn-lg">
+                <a href="https://stake.com/?c=MADA" target="_blank" class="btn btn-primary btn-lg">
                   Register on Stake.com
                 </a>
               </div>

@@ -39,7 +39,7 @@ export class Bonus {
         desc: 'Climb the BetMada community leaderboard by wagering on Stake. Top 50 split $25,000.',
         code: 'BETMADA',
         bonusVal: '$25K Pool',
-        perks: ['Auto-entry via Code BETMADA', 'Real-time Leaderboard', 'Crypto Payouts']
+        perks: ['Auto-entry via Code MADA', 'Real-time Leaderboard', 'Crypto Payouts']
       },
       {
         id: 'reload',

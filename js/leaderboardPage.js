@@ -87,8 +87,8 @@ export class LeaderboardPage {
 
               <!-- Quick Verification CTA -->
               <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
-                <button class="btn btn-stake btn-lg copy-promo-btn" data-code="BETMADA">
-                  <span>Copy Code: BETMADA</span>
+                <button class="btn btn-stake btn-lg copy-promo-btn" data-code="MADA">
+                  <span>Copy Code: MADA</span>
                 </button>
                 <button class="btn btn-primary btn-lg" id="lb-check-user-btn">
                   <span>🔎 Lookup My Stake Username</span>
@@ -210,7 +210,7 @@ export class LeaderboardPage {
             <div class="grid-3" style="margin-top: 3rem;">
               <div class="glass-card lb-info-card">
                 <span class="info-icon">1️⃣</span>
-                <h4>Register with Code BETMADA</h4>
+                <h4>Register with Code MADA</h4>
                 <p>Sign up on Stake.com using referral code <b>BETMADA</b> to link your account to the BetMada leaderboard.</p>
               </div>
               <div class="glass-card lb-info-card">
@@ -678,7 +678,7 @@ export class LeaderboardPage {
       const masked = LeaderboardPage.maskUsername(rawInput);
       sounds.playCopy();
       ModalManager.close();
-      ModalManager.showToast(`📊 Verified user "${masked}" under code BETMADA! Active Rank: #14 (Wagered: $49,800.00)`);
+      ModalManager.showToast(`📊 Verified user "${masked}" under code MADA! Active Rank: #14 (Wagered: $49,800.00)`);
     };
   }
 }

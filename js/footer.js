@@ -41,7 +41,7 @@ export class Footer {
             <div class="footer-links-col">
               <h4 class="footer-heading">Stake Official</h4>
               <ul class="footer-links">
-                <li><a href="https://stake.com/?c=BETMADA" target="_blank">Stake.com Official</a></li>
+                <li><a href="https://stake.com/?c=MADA" target="_blank">Stake.com Official</a></li>
                 <li><a href="https://stake.com/vip-club" target="_blank">Stake VIP Club</a></li>
                 <li><a href="https://stake.com/provably-fair" target="_blank">Provably Fair System</a></li>
               </ul>

@@ -102,8 +102,8 @@ export class VipCalculator {
                   <span class="total-val text-stake font-mono" id="res-total">$270.50</span>
                 </div>
 
-                <button class="btn btn-primary btn-lg copy-promo-btn" style="width: 100%; margin-top: 1.5rem;" data-code="BETMADA">
-                  Unlock VIP Bonus with Code: BETMADA
+                <button class="btn btn-primary btn-lg copy-promo-btn" style="width: 100%; margin-top: 1.5rem;" data-code="MADA">
+                  Unlock VIP Bonus with Code: MADA
                 </button>
               </div>
             </div>

@@ -352,8 +352,8 @@ export class Slots {
             <div style="font-size: 1.2rem; color: var(--neon-gold); font-weight: 800;" class="font-mono">TOTAL WIN: ${amt}</div>
           </div>
 
-          <a href="https://stake.com/?c=BETMADA" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
-            Try Your Luck on Stake (Code: BETMADA)
+          <a href="https://stake.com/?c=MADA" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
+            Try Your Luck on Stake (Code: MADA)
           </a>
         </div>
       `);
@@ -383,7 +383,7 @@ export class Slots {
       btn.addEventListener('click', () => {
         sounds.playClick();
         const name = btn.getAttribute('data-name');
-        window.open('https://stake.com/?c=BETMADA', '_blank');
+        window.open('https://stake.com/?c=MADA', '_blank');
       });
     });
 
@@ -411,8 +411,8 @@ export class Slots {
               </div>
             </div>
 
-            <a href="https://stake.com/?c=BETMADA" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
-              Play ${name} with Code BETMADA
+            <a href="https://stake.com/?c=MADA" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
+              Play ${name} with Code MADA
             </a>
           </div>
         `);
