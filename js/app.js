@@ -8,9 +8,11 @@ import { Bonus } from './bonus.js';
 import { Giveaways } from './giveaways.js';
 import { StakeReview } from './stakeReview.js';
 import { Footer } from './footer.js';
+import { AgeGate } from './ageGate.js';
 
 class BetMadaApp {
   static init() {
+    AgeGate.init();
     const root = document.getElementById('app');
     if (!root) return;
 
