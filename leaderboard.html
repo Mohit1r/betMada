@@ -29,10 +29,8 @@
   <!-- Dedicated Leaderboard JavaScript Module -->
   <script type="module">
     import { LeaderboardPage } from './js/leaderboardPage.js';
-    import { AgeGate } from './js/ageGate.js';
     
     document.addEventListener('DOMContentLoaded', () => {
-      AgeGate.init();
       const root = document.getElementById('app');
       if (root) {
         root.innerHTML = LeaderboardPage.render();
