@@ -12,7 +12,7 @@ const SHEET_TABS = {
   platinum: 'Plat1',
 };
 const RAFFLE_MAX_SLOTS    = 15;
-const RAFFLE_MAX_WINNERS  = 5;
+const RAFFLE_MAX_WINNERS  = 10;
 const REFRESH_MS          = 5 * 60 * 1000; // auto-refresh every 5 minutes
 
 // ── LEVEL DEFINITIONS ────────────────────────────────────────────────────────
@@ -100,7 +100,7 @@ export class RaffleTracker {
             <h2 class="section-title">VIP Level-Up Raffle Tracker</h2>
             <p class="section-description">
               The first <strong>${RAFFLE_MAX_SLOTS} players</strong> to level up at each VIP tier earn a raffle spot.
-              <strong>${RAFFLE_MAX_WINNERS} raffle winners</strong> per level take the big multipliers — and all remaining 10 players still earn a <strong>0.75× level-up match</strong>!
+              <strong>${RAFFLE_MAX_WINNERS} raffle winners</strong> per level take the multipliers!
             </p>
           </div>
 
@@ -121,29 +121,19 @@ export class RaffleTracker {
                 <div class="rpt-mult">5× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-2nd">
-                <div class="rpt-place">🥈<span>2nd</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:60%;"></div></div>
-                <div class="rpt-mult">3× <span>Level-Up Match</span></div>
-              </div>
-              <div class="rpt-row rpt-3rd">
-                <div class="rpt-place">🥉<span>3rd</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:40%;"></div></div>
-                <div class="rpt-mult">2× <span>Level-Up Match</span></div>
-              </div>
-              <div class="rpt-row rpt-4th">
-                <div class="rpt-place">4️⃣<span>4th</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:40%;"></div></div>
-                <div class="rpt-mult">2× <span>Level-Up Match</span></div>
-              </div>
-              <div class="rpt-row rpt-5th">
-                <div class="rpt-place">5️⃣<span>5th</span></div>
+                <div class="rpt-place">🥈<span>2nd-3rd</span></div>
                 <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:20%;"></div></div>
                 <div class="rpt-mult">1× <span>Level-Up Match</span></div>
               </div>
+              <div class="rpt-row rpt-3rd">
+                <div class="rpt-place">🥉<span>4th-7th</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:10%;"></div></div>
+                <div class="rpt-mult">0.5× <span>Level-Up Match</span></div>
+              </div>
               <div class="rpt-row rpt-rest">
-                <div class="rpt-place">🎁<span>6th–15th</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:15%;"></div></div>
-                <div class="rpt-mult">0.75× <span>Level-Up Match</span></div>
+                <div class="rpt-place">🎁<span>8th-10th</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:5%;"></div></div>
+                <div class="rpt-mult">0.25× <span>Level-Up Match</span></div>
               </div>
             </div>
           </div>
