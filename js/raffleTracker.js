@@ -59,6 +59,7 @@ export class RaffleTracker {
       const json = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')')));
       if (json.status !== 'ok') return [];
       return (json.table?.rows || [])
+        .slice(1)  // skip header row ("USERNAME")
         .map(r => r.c?.[0]?.v?.toString().trim())
         .filter(Boolean)
         .slice(0, RAFFLE_MAX_SLOTS);
