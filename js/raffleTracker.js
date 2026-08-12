@@ -117,22 +117,18 @@ export class RaffleTracker {
             <div class="rpt-rows">
               <div class="rpt-row rpt-1st">
                 <div class="rpt-place">🥇<span>1st</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:100%;"></div></div>
                 <div class="rpt-mult">5× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-2nd">
                 <div class="rpt-place">🥈<span>2nd-3rd</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:20%;"></div></div>
                 <div class="rpt-mult">1× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-3rd">
                 <div class="rpt-place">🥉<span>4th-8th</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:10%;"></div></div>
                 <div class="rpt-mult">0.5× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-rest">
                 <div class="rpt-place">🎁<span>9th-10th</span></div>
-                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:5%;"></div></div>
                 <div class="rpt-mult">0.25× <span>Level-Up Match</span></div>
               </div>
             </div>
@@ -253,34 +249,28 @@ export class RaffleTracker {
         .rpt-title  { font-family: var(--font-main); font-size: 1.05rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
         .rpt-sub    { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
         .rpt-rows   { display: flex; flex-direction: column; gap: 0.5rem; }
-        .rpt-row    { display: grid; grid-template-columns: 80px 1fr 130px; align-items: center; gap: 1rem; padding: 0.6rem 1rem; border-radius: 10px; transition: background 0.2s; }
+        .rpt-row    { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1.2rem; border-radius: 10px; transition: background 0.2s; }
         .rpt-row:hover { background: rgba(255,255,255,0.04); }
-        .rpt-place  { display: flex; align-items: center; gap: 0.4rem; font-size: 1.1rem; }
-        .rpt-place span { font-family: var(--font-main); font-size: 0.75rem; font-weight: 800; color: var(--text-secondary); text-transform: uppercase; }
-        .rpt-bar-wrap { background: rgba(255,255,255,0.07); border-radius: 99px; height: 8px; overflow: hidden; }
-        .rpt-bar  { height: 100%; border-radius: 99px; transition: width 1s ease; }
-        .rpt-mult { font-family: var(--font-main); font-weight: 900; font-size: 1rem; text-align: right; white-space: nowrap; }
-        .rpt-mult span { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); display: block; }
+        .rpt-place  { display: flex; align-items: center; gap: 0.6rem; font-size: 1.2rem; }
+        .rpt-place span { font-family: var(--font-main); font-size: 0.85rem; font-weight: 800; color: var(--text-secondary); text-transform: uppercase; }
+        .rpt-mult { font-family: var(--font-main); font-weight: 900; font-size: 1.1rem; text-align: right; }
+        .rpt-mult span { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); display: block; }
         .rpt-1st { background: rgba(255,215,0,0.07); }
-        .rpt-1st .rpt-bar  { background: linear-gradient(90deg,#ffd700,#ff8c00); box-shadow: 0 0 8px rgba(255,215,0,0.5); }
-        .rpt-1st .rpt-mult { color: #ffd700; }
-        .rpt-2nd .rpt-bar  { background: linear-gradient(90deg,#c0c0c0,#8899aa); }
+        .rpt-1st .rpt-mult { color: #ffd700; text-shadow: 0 0 10px rgba(255,215,0,0.3); }
+        .rpt-2nd { background: rgba(255,255,255,0.03); }
         .rpt-2nd .rpt-mult { color: #c0c0c0; }
-        .rpt-3rd .rpt-bar  { background: linear-gradient(90deg,#cd7f32,#8b4513); }
+        .rpt-3rd { background: rgba(255,255,255,0.02); }
         .rpt-3rd .rpt-mult { color: #cd7f32; }
-        .rpt-4th .rpt-bar  { background: linear-gradient(90deg,#a855f7,#7c3aed); }
         .rpt-4th .rpt-mult { color: #a855f7; }
-        .rpt-5th .rpt-bar  { background: linear-gradient(90deg,#6366f1,#4338ca); }
         .rpt-5th .rpt-mult { color: #818cf8; }
         .rpt-rest { border: 1px dashed rgba(255,255,255,0.1); }
-        .rpt-rest .rpt-bar  { background: rgba(255,255,255,0.25); }
         .rpt-rest .rpt-mult { color: var(--text-secondary); }
 
         /* ===================== MOBILE ===================== */
         @media (max-width: 1100px) { .raffle-grid { grid-template-columns: repeat(2,1fr); } }
         @media (max-width: 640px)  {
           .raffle-grid { grid-template-columns: 1fr; }
-          .rpt-row { grid-template-columns: 70px 1fr 100px; gap: 0.6rem; padding: 0.5rem 0.75rem; }
+          .rpt-row { padding: 0.6rem 1rem; }
           .rpt-mult { font-size: 0.85rem; }
           .raffle-prize-table { padding: 1.25rem; }
         }
