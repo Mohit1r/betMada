@@ -4,12 +4,12 @@
 
 // ── CONFIG ──────────────────────────────────────────────────────────────────
 const SHEET_ID   = '1J7wLmB0cM2g09lHnnZKGYfgEzMKmNBaqDzMoPRK8Yng';
-// Tab names in your Google Sheet — edit these to match exactly
+// Tab names in your Google Sheet — must match exactly
 const SHEET_TABS = {
   bronze:   'Bronze',
   silver:   'Silver',
   gold:     'Gold',
-  platinum: 'Platinum',
+  platinum: 'Plat1',
 };
 const RAFFLE_MAX_SLOTS    = 15;
 const RAFFLE_MAX_WINNERS  = 5;
