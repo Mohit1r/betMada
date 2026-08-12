@@ -115,35 +115,6 @@ export class RaffleTracker {
             </div>
           </div>
 
-          <!-- Prize Breakdown Strip -->
-          <div class="raffle-prizes">
-            <div class="raffle-prize-row prize-1st">
-              <span class="prize-place">🥇 1st</span>
-              <span class="prize-arrow">→</span>
-              <span class="prize-reward">5× Level-Up Match</span>
-            </div>
-            <div class="raffle-prize-row prize-2nd">
-              <span class="prize-place">🥈 2nd</span>
-              <span class="prize-arrow">→</span>
-              <span class="prize-reward">3× Level-Up Match</span>
-            </div>
-            <div class="raffle-prize-row prize-3rd">
-              <span class="prize-place">🥉 3rd</span>
-              <span class="prize-arrow">→</span>
-              <span class="prize-reward">2× Level-Up Match</span>
-            </div>
-            <div class="raffle-prize-row prize-4th">
-              <span class="prize-place">4️⃣ 4th</span>
-              <span class="prize-arrow">→</span>
-              <span class="prize-reward">2× Level-Up Match</span>
-            </div>
-            <div class="raffle-prize-row prize-5th">
-              <span class="prize-place">5️⃣ 5th</span>
-              <span class="prize-arrow">→</span>
-              <span class="prize-reward">1× Level-Up Match</span>
-            </div>
-          </div>
-
           <!-- Bottle Fill Visualization -->
           <div class="raffle-bottle-wrap">
             <div class="bottle-container">
@@ -185,13 +156,53 @@ export class RaffleTracker {
             </div>
             <h2 class="section-title">VIP Level-Up Raffle Tracker</h2>
             <p class="section-description">
-              The first <strong>15 players</strong> to level up at each VIP tier earn a raffle spot. 
-              <strong>5 winners</strong> per level are drawn — prizes scale from a massive <strong>5× level-up match</strong> for 1st place down to <strong>1× match</strong> for 5th!
+              The first <strong>15 players</strong> to level up at each VIP tier earn a raffle spot.
+              <strong>5 raffle winners</strong> per level take the big multipliers — and all remaining 10 players still earn a <strong>0.75× level-up match</strong>!
             </p>
           </div>
 
           <div class="raffle-grid">
             ${levelCards}
+          </div>
+
+          <!-- Shared Prize Breakdown -->
+          <div class="raffle-prize-table glass-card">
+            <div class="rpt-header">
+              <span class="rpt-title">🏆 Prize Breakdown — Applies to All Levels</span>
+              <span class="rpt-sub">Drawn by raffle for each VIP tier</span>
+            </div>
+            <div class="rpt-rows">
+              <div class="rpt-row rpt-1st">
+                <div class="rpt-place">🥇<span>1st</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:100%;"></div></div>
+                <div class="rpt-mult">5× <span>Level-Up Match</span></div>
+              </div>
+              <div class="rpt-row rpt-2nd">
+                <div class="rpt-place">🥈<span>2nd</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:60%;"></div></div>
+                <div class="rpt-mult">3× <span>Level-Up Match</span></div>
+              </div>
+              <div class="rpt-row rpt-3rd">
+                <div class="rpt-place">🥉<span>3rd</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:40%;"></div></div>
+                <div class="rpt-mult">2× <span>Level-Up Match</span></div>
+              </div>
+              <div class="rpt-row rpt-4th">
+                <div class="rpt-place">4️⃣<span>4th</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:40%;"></div></div>
+                <div class="rpt-mult">2× <span>Level-Up Match</span></div>
+              </div>
+              <div class="rpt-row rpt-5th">
+                <div class="rpt-place">5️⃣<span>5th</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:20%;"></div></div>
+                <div class="rpt-mult">1× <span>Level-Up Match</span></div>
+              </div>
+              <div class="rpt-row rpt-rest">
+                <div class="rpt-place">🎁<span>6th–15th</span></div>
+                <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:15%;"></div></div>
+                <div class="rpt-mult">0.75× <span>Level-Up Match</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -589,46 +600,107 @@ export class RaffleTracker {
           font-style: italic;
         }
 
-        /* ===================== PRIZE BREAKDOWN ===================== */
-        .raffle-prizes {
+        /* ===================== SHARED PRIZE TABLE ===================== */
+        .raffle-prize-table {
+          margin-top: 2.5rem;
+          padding: 1.75rem 2rem;
+          border: 1px solid rgba(255,255,255,0.1);
+          background: rgba(18,7,32,0.7);
+        }
+        .rpt-header {
+          display: flex;
+          align-items: baseline;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .rpt-title {
+          font-family: var(--font-main);
+          font-size: 1.05rem;
+          font-weight: 900;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .rpt-sub {
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          font-weight: 600;
+        }
+        .rpt-rows {
           display: flex;
           flex-direction: column;
-          gap: 0.3rem;
-          padding: 0.75rem;
-          background: rgba(0,0,0,0.2);
-          border-radius: 10px;
-          border: 1px solid rgba(255,255,255,0.06);
-        }
-        .raffle-prize-row {
-          display: flex;
-          align-items: center;
           gap: 0.5rem;
-          padding: 0.3rem 0.4rem;
-          border-radius: 6px;
-          font-size: 0.72rem;
+        }
+        .rpt-row {
+          display: grid;
+          grid-template-columns: 80px 1fr 130px;
+          align-items: center;
+          gap: 1rem;
+          padding: 0.6rem 1rem;
+          border-radius: 10px;
           transition: background 0.2s;
         }
-        .raffle-prize-row:hover { background: rgba(255,255,255,0.04); }
-        .prize-place {
+        .rpt-row:hover { background: rgba(255,255,255,0.04); }
+        .rpt-place {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 1.1rem;
+        }
+        .rpt-place span {
+          font-family: var(--font-main);
+          font-size: 0.75rem;
           font-weight: 800;
-          min-width: 46px;
+          color: var(--text-secondary);
+          text-transform: uppercase;
+        }
+        .rpt-bar-wrap {
+          background: rgba(255,255,255,0.07);
+          border-radius: 99px;
+          height: 8px;
+          overflow: hidden;
+        }
+        .rpt-bar {
+          height: 100%;
+          border-radius: 99px;
+          transition: width 1s ease;
+        }
+        .rpt-mult {
           font-family: var(--font-main);
+          font-weight: 900;
+          font-size: 1rem;
+          text-align: right;
+          white-space: nowrap;
+        }
+        .rpt-mult span {
           font-size: 0.7rem;
+          font-weight: 600;
+          color: var(--text-muted);
+          display: block;
         }
-        .prize-arrow { color: rgba(255,255,255,0.25); font-size: 0.65rem; }
-        .prize-reward {
-          flex: 1;
-          font-weight: 700;
-          font-family: var(--font-main);
-          letter-spacing: 0.3px;
+        /* Row colour theming */
+        .rpt-1st { background: rgba(255,215,0,0.07); }
+        .rpt-1st .rpt-bar { background: linear-gradient(90deg,#ffd700,#ff8c00); box-shadow: 0 0 8px rgba(255,215,0,0.5); }
+        .rpt-1st .rpt-mult { color: #ffd700; }
+        .rpt-2nd .rpt-bar { background: linear-gradient(90deg,#c0c0c0,#8899aa); }
+        .rpt-2nd .rpt-mult { color: #c0c0c0; }
+        .rpt-3rd .rpt-bar { background: linear-gradient(90deg,#cd7f32,#8b4513); }
+        .rpt-3rd .rpt-mult { color: #cd7f32; }
+        .rpt-4th .rpt-bar { background: linear-gradient(90deg,#a855f7,#7c3aed); }
+        .rpt-4th .rpt-mult { color: #a855f7; }
+        .rpt-5th .rpt-bar { background: linear-gradient(90deg,#6366f1,#4338ca); }
+        .rpt-5th .rpt-mult { color: #818cf8; }
+        .rpt-rest { border: 1px dashed rgba(255,255,255,0.1); }
+        .rpt-rest .rpt-bar { background: rgba(255,255,255,0.25); }
+        .rpt-rest .rpt-mult { color: var(--text-secondary); }
+
+        @media (max-width: 640px) {
+          .rpt-row { grid-template-columns: 70px 1fr 100px; gap: 0.6rem; padding: 0.5rem 0.75rem; }
+          .rpt-mult { font-size: 0.85rem; }
+          .raffle-prize-table { padding: 1.25rem; }
         }
-        .prize-1st .prize-reward { color: #ffd700; }
-        .prize-2nd .prize-reward { color: #c0c0c0; }
-        .prize-3rd .prize-reward { color: #cd7f32; }
-        .prize-4th .prize-reward { color: var(--text-secondary); }
-        .prize-5th .prize-reward { color: var(--text-muted); }
-        .prize-1st { background: rgba(255,215,0,0.06); }
-        .prize-2nd { background: rgba(192,192,192,0.04); }
+
 
         /* ===================== MOBILE ===================== */
         @media (max-width: 1100px) {
