@@ -115,6 +115,35 @@ export class RaffleTracker {
             </div>
           </div>
 
+          <!-- Prize Breakdown Strip -->
+          <div class="raffle-prizes">
+            <div class="raffle-prize-row prize-1st">
+              <span class="prize-place">🥇 1st</span>
+              <span class="prize-arrow">→</span>
+              <span class="prize-reward">5× Level-Up Match</span>
+            </div>
+            <div class="raffle-prize-row prize-2nd">
+              <span class="prize-place">🥈 2nd</span>
+              <span class="prize-arrow">→</span>
+              <span class="prize-reward">3× Level-Up Match</span>
+            </div>
+            <div class="raffle-prize-row prize-3rd">
+              <span class="prize-place">🥉 3rd</span>
+              <span class="prize-arrow">→</span>
+              <span class="prize-reward">2× Level-Up Match</span>
+            </div>
+            <div class="raffle-prize-row prize-4th">
+              <span class="prize-place">4️⃣ 4th</span>
+              <span class="prize-arrow">→</span>
+              <span class="prize-reward">2× Level-Up Match</span>
+            </div>
+            <div class="raffle-prize-row prize-5th">
+              <span class="prize-place">5️⃣ 5th</span>
+              <span class="prize-arrow">→</span>
+              <span class="prize-reward">1× Level-Up Match</span>
+            </div>
+          </div>
+
           <!-- Progress Bar -->
           <div class="raffle-progress-wrap">
             <div class="raffle-progress-bar">
@@ -145,7 +174,7 @@ export class RaffleTracker {
             <h2 class="section-title">VIP Level-Up Raffle Tracker</h2>
             <p class="section-description">
               The first <strong>15 players</strong> to level up at each VIP tier earn a raffle spot. 
-              <strong>${RAFFLE_MAX_WINNERS} winners</strong> per level are drawn for exclusive crypto prizes!
+              <strong>5 winners</strong> per level are drawn — prizes scale from a massive <strong>5× level-up match</strong> for 1st place down to <strong>1× match</strong> for 5th!
             </p>
           </div>
 
@@ -485,6 +514,47 @@ export class RaffleTracker {
           padding: 2rem;
           font-style: italic;
         }
+
+        /* ===================== PRIZE BREAKDOWN ===================== */
+        .raffle-prizes {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          padding: 0.75rem;
+          background: rgba(0,0,0,0.2);
+          border-radius: 10px;
+          border: 1px solid rgba(255,255,255,0.06);
+        }
+        .raffle-prize-row {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.3rem 0.4rem;
+          border-radius: 6px;
+          font-size: 0.72rem;
+          transition: background 0.2s;
+        }
+        .raffle-prize-row:hover { background: rgba(255,255,255,0.04); }
+        .prize-place {
+          font-weight: 800;
+          min-width: 46px;
+          font-family: var(--font-main);
+          font-size: 0.7rem;
+        }
+        .prize-arrow { color: rgba(255,255,255,0.25); font-size: 0.65rem; }
+        .prize-reward {
+          flex: 1;
+          font-weight: 700;
+          font-family: var(--font-main);
+          letter-spacing: 0.3px;
+        }
+        .prize-1st .prize-reward { color: #ffd700; }
+        .prize-2nd .prize-reward { color: #c0c0c0; }
+        .prize-3rd .prize-reward { color: #cd7f32; }
+        .prize-4th .prize-reward { color: var(--text-secondary); }
+        .prize-5th .prize-reward { color: var(--text-muted); }
+        .prize-1st { background: rgba(255,215,0,0.06); }
+        .prize-2nd { background: rgba(192,192,192,0.04); }
 
         /* ===================== MOBILE ===================== */
         @media (max-width: 1100px) {
