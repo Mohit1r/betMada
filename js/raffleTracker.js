@@ -83,14 +83,6 @@ export class RaffleTracker {
     });
     if (anyUpdate) {
       RAFFLE_LEVELS.forEach(l => RaffleTracker.refreshCard(l.id));
-      const ts = document.getElementById('raffle-last-updated');
-      if (ts) ts.textContent = `Synced from Google Sheets · ${new Date().toLocaleTimeString()}`;
-      const loader = document.getElementById('raffle-fetch-status');
-      if (loader) {
-        loader.textContent = '✅ Data loaded';
-        loader.style.color = 'var(--stake-green)';
-        setTimeout(() => { if (loader) loader.textContent = ''; }, 3000);
-      }
     }
   }
 
@@ -110,10 +102,6 @@ export class RaffleTracker {
               The first <strong>${RAFFLE_MAX_SLOTS} players</strong> to level up at each VIP tier earn a raffle spot.
               <strong>${RAFFLE_MAX_WINNERS} raffle winners</strong> per level take the big multipliers — and all remaining 10 players still earn a <strong>0.75× level-up match</strong>!
             </p>
-            <div class="raffle-sync-bar">
-              <span id="raffle-fetch-status" class="raffle-fetch-status">⏳ Loading from Google Sheets…</span>
-              <span id="raffle-last-updated" class="raffle-last-updated"></span>
-            </div>
           </div>
 
           <div class="raffle-grid" id="raffle-grid">
@@ -163,28 +151,6 @@ export class RaffleTracker {
       </section>
 
       <style>
-        /* ===================== SECTION ===================== */
-        .raffle-section { position: relative; }
-        .raffle-sync-bar {
-          display: flex;
-          align-items: center;
-          gap: 1.5rem;
-          margin-top: 0.75rem;
-          flex-wrap: wrap;
-        }
-        .raffle-fetch-status {
-          font-size: 0.75rem;
-          font-weight: 700;
-          color: var(--text-muted);
-          font-family: var(--font-main);
-          transition: color 0.3s;
-        }
-        .raffle-last-updated {
-          font-size: 0.7rem;
-          color: var(--text-muted);
-          font-family: var(--font-main);
-        }
-
         /* ===================== GRID ===================== */
         .raffle-grid {
           display: grid;
