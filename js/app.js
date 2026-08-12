@@ -8,6 +8,7 @@ import { Bonus } from './bonus.js';
 import { Giveaways } from './giveaways.js';
 import { StakeReview } from './stakeReview.js';
 import { Footer } from './footer.js';
+import { RaffleTracker } from './raffleTracker.js';
 
 class BetMadaApp {
   static init() {
@@ -18,6 +19,7 @@ class BetMadaApp {
       ${Navbar.render()}
       <main>
         ${Hero.render()}
+        ${RaffleTracker.render()}
         ${Bonus.render()}
         ${Giveaways.render()}
         ${StakeReview.render()}
@@ -28,6 +30,7 @@ class BetMadaApp {
     // Attach component interactive event handlers
     Navbar.attachEvents();
     Hero.attachEvents();
+    RaffleTracker.attachEvents();
     Bonus.attachEvents();
     Giveaways.attachEvents();
     StakeReview.attachEvents();
