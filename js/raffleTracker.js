@@ -126,12 +126,12 @@ export class RaffleTracker {
                 <div class="rpt-mult">1× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-3rd">
-                <div class="rpt-place">🥉<span>4th-7th</span></div>
+                <div class="rpt-place">🥉<span>4th-8th</span></div>
                 <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:10%;"></div></div>
                 <div class="rpt-mult">0.5× <span>Level-Up Match</span></div>
               </div>
               <div class="rpt-row rpt-rest">
-                <div class="rpt-place">🎁<span>8th-10th</span></div>
+                <div class="rpt-place">🎁<span>9th-10th</span></div>
                 <div class="rpt-bar-wrap"><div class="rpt-bar" style="width:5%;"></div></div>
                 <div class="rpt-mult">0.25× <span>Level-Up Match</span></div>
               </div>
