@@ -61,6 +61,9 @@ export class Hero {
               <button class="btn btn-x btn-lg" id="hero-x-btn">
                 <span>𝕏 Follow X Giveaways</span>
               </button>
+              <button class="btn btn-lg" id="hero-insta-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border: none; box-shadow: 0 0 10px rgba(220, 39, 67, 0.4);">
+                <span>📸 Follow Instagram</span>
+              </button>
             </div>
 
             <!-- Trust Stats -->
@@ -390,7 +393,16 @@ export class Hero {
     if (xBtn) {
       xBtn.addEventListener('click', () => {
         sounds.playClick();
-        window.open('https://x.com', '_blank');
+        window.open('https://x.com/BadMadaFKR', '_blank');
+      });
+    }
+
+    // Instagram Button trigger
+    const instaBtn = document.getElementById('hero-insta-btn');
+    if (instaBtn) {
+      instaBtn.addEventListener('click', () => {
+        sounds.playClick();
+        window.open('https://www.instagram.com/stakexcodemada?igsh=bmV3cDZ6bm05dW93&utm_source=qr', '_blank');
       });
     }
 

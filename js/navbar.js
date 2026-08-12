@@ -61,8 +61,9 @@ export class Navbar {
             <span class="live-stream-title">🔥 EXCLUSIVE CASH DROPS FOR CODE <b>MADA</b> USERS & WEEKLY X DROPS!</span>
           </div>
           <div class="live-meta">
-            <button class="btn btn-discord btn-sm" id="nav-join-discord-btn">💬 Join Discord</button>
-            <button class="btn btn-x btn-sm" id="nav-follow-x-btn">𝕏 Follow X</button>
+            <button class="btn btn-discord btn-sm" id="nav-join-discord-btn">💬 Discord</button>
+            <button class="btn btn-x btn-sm" id="nav-follow-x-btn">𝕏 X (Twitter)</button>
+            <button class="btn btn-sm" id="nav-follow-insta-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border: none; box-shadow: 0 0 10px rgba(220, 39, 67, 0.4);">📸 Instagram</button>
           </div>
         </div>
       </div>
@@ -315,7 +316,16 @@ export class Navbar {
     if (xNavBtn) {
       xNavBtn.addEventListener('click', () => {
         sounds.playClick();
-        window.open('https://x.com', '_blank');
+        window.open('https://x.com/BadMadaFKR', '_blank');
+      });
+    }
+
+    // Nav Follow Instagram trigger
+    const instaNavBtn = document.getElementById('nav-follow-insta-btn');
+    if (instaNavBtn) {
+      instaNavBtn.addEventListener('click', () => {
+        sounds.playClick();
+        window.open('https://www.instagram.com/stakexcodemada?igsh=bmV3cDZ6bm05dW93&utm_source=qr', '_blank');
       });
     }
 

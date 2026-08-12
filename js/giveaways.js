@@ -66,7 +66,7 @@ export class Giveaways {
                   <span class="giveaway-prize text-gradient-gold font-mono">$5,000 / WEEK</span>
                 </div>
                 <h4 class="giveaway-title">Weekly Retweet & Wager X Giveaways</h4>
-                <p class="giveaway-desc">Follow <b>@BetMadaVIP</b> on X (Twitter), retweet our weekly pinned post, and reply with your Stake username to enter.</p>
+                <p class="giveaway-desc">Follow <b>@BadMadaFKR</b> on X (Twitter), retweet our weekly pinned post, and reply with your Stake username to enter.</p>
                 <div class="giveaway-meta">
                   <span>📱 Requirement: Follow X, Retweet Pinned Post & Drop Username</span>
                 </div>
@@ -74,7 +74,7 @@ export class Giveaways {
                   <button class="btn btn-x giveaway-entry-btn" data-type="x" data-title="Weekly X Cash Giveaway">
                     Enter X Retweet Drop
                   </button>
-                  <a href="https://x.com" target="_blank" class="btn btn-glass">Follow @BetMadaVIP</a>
+                  <a href="https://x.com/BadMadaFKR" target="_blank" class="btn btn-glass">Follow @BadMadaFKR</a>
                 </div>
               </div>
 

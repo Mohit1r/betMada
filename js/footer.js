@@ -22,8 +22,8 @@ export class Footer {
               </p>
               <div class="social-links">
                 <a href="https://discord.gg/mada" target="_blank" class="social-btn" title="Discord">💬 Discord</a>
-                <a href="https://twitter.com" target="_blank" class="social-btn" title="Twitter / X">🐦 X (Twitter)</a>
-                <a href="https://telegram.org" target="_blank" class="social-btn" title="Telegram">✈️ Telegram</a>
+                <a href="https://x.com/BadMadaFKR" target="_blank" class="social-btn" title="Twitter / X">🐦 X (Twitter)</a>
+                <a href="https://www.instagram.com/stakexcodemada?igsh=bmV3cDZ6bm05dW93&utm_source=qr" target="_blank" class="social-btn" title="Instagram">📸 Instagram</a>
               </div>
             </div>
 
