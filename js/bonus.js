@@ -31,17 +31,6 @@ export class Bonus {
         perks: ['Min. Deposit $50', '200% Match Ratio', 'Instant Account Credit']
       },
       {
-        id: 'race',
-        title: '$25,000 VIP Monthly Race',
-        tag: '🔥 $25K MONTHLY',
-        tagClass: 'badge-cyan',
-        icon: '🏆',
-        desc: 'Climb the BetMada community leaderboard by wagering on Stake. Top 50 split $25,000.',
-        code: 'BETMADA',
-        bonusVal: '$25K Pool',
-        perks: ['Auto-entry via Code MADA', 'Real-time Leaderboard', 'Crypto Payouts']
-      },
-      {
         id: 'reload',
         title: 'Daily & Weekly Reloads',
         tag: 'RECURRING BONUS',

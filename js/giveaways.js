@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BETMADA DISCORD & X COMMUNITY GIVEAWAYS & LEADERBOARD PREVIEW COMPONENT
+   MADA DISCORD & X COMMUNITY GIVEAWAYS & LEADERBOARD PREVIEW COMPONENT
    ========================================================================== */
 
 import { sounds } from './sound.js';
@@ -30,7 +30,7 @@ export class Giveaways {
             </div>
             <h2 class="section-title">Discord & X Community Giveaways</h2>
             <p class="section-description">
-              Register on Stake with code <strong class="text-purple font-mono">BETMADA</strong> to participate in daily Discord rain drops, weekly X retweet cash pools, and our $25,000 monthly wager race!
+              Register on Stake with code <strong class="text-purple font-mono">MADA</strong> to participate in daily Discord rain drops, and weekly X retweet cash pools!
             </p>
           </div>
 
@@ -47,9 +47,9 @@ export class Giveaways {
                   <span class="giveaway-prize text-gradient-discord font-mono">$1,000 / DAY</span>
                 </div>
                 <h4 class="giveaway-title">Exclusive Code MADA Discord Drops</h4>
-                <p class="giveaway-desc">Multiple daily cash rains credited directly into Stake vault for verified users who signed up with code <strong>BETMADA</strong>.</p>
+                <p class="giveaway-desc">Multiple daily cash rains credited directly into Stake vault for verified users who signed up with code <strong>MADA</strong>.</p>
                 <div class="giveaway-meta">
-                  <span>🔒 Requirement: Stake account registered with code <b>BETMADA</b> + Discord Member</span>
+                  <span>🔒 Requirement: Stake account registered with code <b>MADA</b> + Discord Member</span>
                 </div>
                 <div class="card-btn-row">
                   <button class="btn btn-discord giveaway-entry-btn" data-type="discord" data-title="Daily Discord Cash Drop">
@@ -78,60 +78,7 @@ export class Giveaways {
                 </div>
               </div>
 
-              <!-- Monthly Race Card -->
-              <div class="glass-card giveaway-card">
-                <div class="card-top-row">
-                  <span class="badge badge-gold">🔥 MONTHLY RACE</span>
-                  <span class="giveaway-prize text-gradient-purple font-mono">$25,000.00</span>
-                </div>
-                <h4 class="giveaway-title">BetMada $25K VIP Monthly Leaderboard</h4>
-                <p class="giveaway-desc">Top 50 community wagers using code <strong>BETMADA</strong> split $25,000. Direct crypto payouts at the end of each month.</p>
-                <div class="giveaway-meta">
-                  <span>🎯 Requirement: Auto-entry when wagering on Stake under code <b>BETMADA</b></span>
-                </div>
-                <a href="leaderboard.html" class="btn btn-primary" style="width: 100%; text-decoration: none;">
-                  👑 Open Full $25K Leaderboard Page
-                </a>
-              </div>
 
-            </div>
-
-            <!-- Live Leaderboard Preview Box -->
-            <div class="glass-card leaderboard-card">
-              <div class="leaderboard-header">
-                <div>
-                  <h3 class="box-header-title" style="margin: 0;">👑 $25K RACE STANDINGS</h3>
-                  <span style="font-size: 0.75rem; color: var(--text-muted);">TOP COMMUNITY WAGERS (MASKED)</span>
-                </div>
-                <a href="leaderboard.html" class="badge badge-purple font-mono" style="text-decoration: none;">FULL PAGE &rarr;</a>
-              </div>
-
-              <div class="table-responsive-wrapper">
-                <div class="leaderboard-table">
-                  <div class="table-head">
-                    <span>RANK</span>
-                    <span>PLAYER</span>
-                    <span>WAGERED</span>
-                    <span>PRIZE</span>
-                  </div>
-
-                  <div class="table-body">
-                    ${leaderboardData.map(item => `
-                      <div class="table-row ${item.rank <= 3 ? 'top-three' : ''}">
-                        <span class="rank-col font-mono">${item.rank === 1 ? '🥇' : item.rank === 2 ? '🥈' : item.rank === 3 ? '🥉' : ''} #${item.rank}</span>
-                        <span class="user-col font-mono">${Giveaways.maskUsername(item.user)}</span>
-                        <span class="wager-col font-mono">${item.wager}</span>
-                        <span class="prize-col font-mono text-stake">${item.prize}</span>
-                      </div>
-                    `).join('')}
-                  </div>
-                </div>
-              </div>
-
-              <div class="leaderboard-footer">
-                <span>View all 50 rank payouts</span>
-                <a href="leaderboard.html" class="btn btn-sm btn-stake" style="text-decoration: none;">Open Leaderboard Page</a>
-              </div>
             </div>
 
           </div>
