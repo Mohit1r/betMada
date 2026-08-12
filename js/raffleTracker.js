@@ -144,16 +144,28 @@ export class RaffleTracker {
             </div>
           </div>
 
-          <!-- Progress Bar -->
-          <div class="raffle-progress-wrap">
-            <div class="raffle-progress-bar">
-              <div class="raffle-progress-fill" style="width: ${pct}%; background: ${level.slotFill};"></div>
+          <!-- Bottle Fill Visualization -->
+          <div class="raffle-bottle-wrap">
+            <div class="bottle-container">
+              <!-- Neck -->
+              <div class="bottle-neck" style="border-color: ${level.color};"></div>
+              <!-- Body -->
+              <div class="bottle-body" style="border-color: ${level.color}; box-shadow: inset 0 0 20px rgba(0,0,0,0.4), 0 0 15px ${level.glow};">
+                <!-- Liquid -->
+                <div class="bottle-liquid" style="height: ${pct}%; background: ${level.slotFill};">
+                  <div class="bottle-wave" style="background: ${level.color};"></div>
+                </div>
+                <!-- Count Overlay -->
+                <div class="bottle-count-text">
+                  <span class="bottle-count-filled" style="color: ${level.color}; text-shadow: 0 0 12px ${level.color};">${filled}</span>
+                  <span class="bottle-count-sep">/ ${RAFFLE_MAX_SLOTS}</span>
+                </div>
+              </div>
             </div>
-            <div class="raffle-progress-label">
-              <span style="color: ${level.color}; font-weight: 800;">${filled}</span>
-              <span style="color: var(--text-muted);">/ ${RAFFLE_MAX_SLOTS} Spots Claimed</span>
-              ${isFull ? `<span class="raffle-locked-badge">🎲 RAFFLE LOCKED IN</span>` : ''}
-            </div>
+            ${isFull
+              ? `<div class="bottle-full-badge">🎲 RAFFLE LOCKED IN</div>`
+              : `<div class="bottle-status" style="color: ${level.color};">${filled} of ${RAFFLE_MAX_SLOTS} spots filled</div>`
+            }
           </div>
 
           <!-- Player Slots Grid -->
@@ -294,40 +306,102 @@ export class RaffleTracker {
           letter-spacing: 1px;
         }
 
-        /* ===================== PROGRESS BAR ===================== */
-        .raffle-progress-wrap { display: flex; flex-direction: column; gap: 0.4rem; }
-        .raffle-progress-bar {
-          height: 8px;
-          background: rgba(255,255,255,0.07);
-          border-radius: 99px;
-          overflow: hidden;
-        }
-        .raffle-progress-fill {
-          height: 100%;
-          border-radius: 99px;
-          transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 0 8px var(--card-glow);
-        }
-        .raffle-progress-label {
+        /* ===================== BOTTLE FILL ===================== */
+        .raffle-bottle-wrap {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          gap: 0.4rem;
-          font-size: 0.75rem;
-          flex-wrap: wrap;
+          gap: 0.6rem;
         }
-        .raffle-locked-badge {
+        .bottle-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .bottle-neck {
+          width: 30px;
+          height: 24px;
+          border: 2px solid;
+          border-bottom: none;
+          border-radius: 5px 5px 0 0;
+          background: rgba(0,0,0,0.25);
+        }
+        .bottle-body {
+          width: 88px;
+          height: 150px;
+          border: 2px solid;
+          border-top: none;
+          border-radius: 2px 2px 20px 20px;
+          position: relative;
+          overflow: hidden;
+          background: rgba(0,0,0,0.2);
+        }
+        .bottle-liquid {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          min-height: 0;
+          transition: height 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+          opacity: 0.8;
+        }
+        .bottle-wave {
+          position: absolute;
+          top: -8px;
+          left: -25%;
+          width: 150%;
+          height: 16px;
+          border-radius: 50%;
+          opacity: 0.6;
+          animation: bottle-wave-motion 2.2s ease-in-out infinite;
+        }
+        @keyframes bottle-wave-motion {
+          0%, 100% { transform: translateX(0) scaleY(0.9); border-radius: 50%; }
+          50% { transform: translateX(12%) scaleY(1.2); border-radius: 40%; }
+        }
+        .bottle-count-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          z-index: 10;
+          pointer-events: none;
+        }
+        .bottle-count-filled {
+          display: block;
+          font-family: var(--font-main);
+          font-size: 2rem;
+          font-weight: 900;
+          line-height: 1;
+        }
+        .bottle-count-sep {
+          display: block;
+          font-size: 0.7rem;
+          font-weight: 700;
+          color: rgba(255,255,255,0.55);
+          font-family: var(--font-main);
+          margin-top: 2px;
+        }
+        .bottle-status {
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-align: center;
+          font-family: var(--font-main);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        .bottle-full-badge {
           background: rgba(255,215,0,0.15);
-          border: 1px solid rgba(255,215,0,0.4);
+          border: 1px solid rgba(255,215,0,0.5);
           color: #ffd700;
           font-size: 0.65rem;
           font-weight: 800;
-          padding: 0.15rem 0.5rem;
+          padding: 0.25rem 0.6rem;
           border-radius: 99px;
           animation: badge-pulse 1.5s ease-in-out infinite;
-        }
-        @keyframes badge-pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.6; }
+          text-align: center;
+          font-family: var(--font-main);
         }
 
         /* ===================== SLOTS GRID ===================== */
@@ -583,18 +657,35 @@ export class RaffleTracker {
     // Update full class
     card.classList.toggle('raffle-card--full', isFull);
 
-    // Update progress fill
-    const fill = card.querySelector('.raffle-progress-fill');
-    if (fill) fill.style.width = `${pct}%`;
+    // Update bottle fill
+    const bottle = card.querySelector('.bottle-liquid');
+    if (bottle) bottle.style.height = `${pct}%`;
 
-    // Update progress label
-    const label = card.querySelector('.raffle-progress-label');
-    if (label) {
-      label.innerHTML = `
-        <span style="color: ${level.color}; font-weight: 800;">${filled}</span>
-        <span style="color: var(--text-muted);">/ ${RAFFLE_MAX_SLOTS} Spots Claimed</span>
-        ${isFull ? `<span class="raffle-locked-badge">🎲 RAFFLE LOCKED IN</span>` : ''}
-      `;
+    // Update count text
+    const countFilled = card.querySelector('.bottle-count-filled');
+    if (countFilled) {
+      countFilled.textContent = filled;
+      countFilled.style.color = level.color;
+      countFilled.style.textShadow = `0 0 12px ${level.color}`;
+    }
+
+    // Update bottle status / locked badge
+    const statusEl = card.querySelector('.bottle-status');
+    const badgeEl = card.querySelector('.bottle-full-badge');
+    const wrap = card.querySelector('.raffle-bottle-wrap');
+    if (wrap) {
+      const existingStatus = wrap.querySelector('.bottle-status, .bottle-full-badge');
+      if (existingStatus) existingStatus.remove();
+      const newEl = document.createElement('div');
+      if (isFull) {
+        newEl.className = 'bottle-full-badge';
+        newEl.textContent = '🎲 RAFFLE LOCKED IN';
+      } else {
+        newEl.className = 'bottle-status';
+        newEl.style.color = level.color;
+        newEl.textContent = `${filled} of ${RAFFLE_MAX_SLOTS} spots filled`;
+      }
+      wrap.appendChild(newEl);
     }
 
     // Update slots
