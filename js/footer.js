@@ -65,7 +65,7 @@ export class Footer {
           <div class="footer-bottom-bar">
             <div class="affiliate-disclosure">
               <p>
-                <strong>Affiliate Disclosure:</strong> BetMada contains affiliate referral links to Stake.com. When you register an account using promo code <strong>BETMADA</strong>, we may earn an affiliate commission at no extra cost to you. BetMada does not offer real-money gambling directly on this website.
+                <strong>Affiliate Disclosure:</strong> BetMada contains affiliate referral links to Stake.com. When you register an account using promo code <strong>MADA</strong>, we may earn an affiliate commission at no extra cost to you. BetMada does not offer real-money gambling directly on this website.
               </p>
             </div>
             <div class="copyright-row">

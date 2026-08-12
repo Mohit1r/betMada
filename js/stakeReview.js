@@ -38,7 +38,7 @@ export class StakeReview {
             <div class="glass-card review-feature-card">
               <div class="feature-icon font-mono">👑</div>
               <h3 class="feature-title">Industry-Best VIP Program</h3>
-              <p class="feature-desc">Unlock dedicated VIP hosts, weekly boost bonuses, monthly reload envelopes, and 15% instant rakeback with no wagering restrictions using code <b>BETMADA</b>.</p>
+              <p class="feature-desc">Unlock dedicated VIP hosts, weekly boost bonuses, monthly reload envelopes, and 15% instant rakeback with no wagering restrictions using code <b>MADA</b>.</p>
             </div>
 
           </div>
@@ -49,7 +49,7 @@ export class StakeReview {
               <span class="badge badge-stake font-mono" style="margin-bottom: 0.75rem;">⚡ OFFICIAL STAKE PARTNER</span>
               <h3 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Ready to Claim Your 200% Deposit Bonus?</h3>
               <p style="color: var(--text-secondary); max-width: 600px; margin-bottom: 1.5rem;">
-                Sign up on Stake.com using code <strong class="text-purple font-mono">BETMADA</strong> to activate instant rakeback, reload rewards, and entry into daily Discord drops.
+                Sign up on Stake.com using code <strong class="text-purple font-mono">MADA</strong> to activate instant rakeback, reload rewards, and entry into daily Discord drops.
               </p>
               <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                 <button class="btn btn-stake btn-lg copy-promo-btn" data-code="MADA">

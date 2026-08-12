@@ -15,7 +15,7 @@ export class Bonus {
         tagClass: 'badge-stake',
         icon: '💎',
         desc: 'Earn instant cash back on every single wager, win or lose. No wagering requirements.',
-        code: 'BETMADA',
+        code: 'MADA',
         bonusVal: '15% Rakeback',
         perks: ['Zero Wagering Requirement', 'Claim Anytime in VIP Menu', 'Applies to Slots & Originals']
       },
@@ -26,7 +26,7 @@ export class Bonus {
         tagClass: 'badge-gold',
         icon: '🚀',
         desc: 'Triple your starting bankroll on Stake with up to $2,000 extra on your initial deposit.',
-        code: 'BETMADA',
+        code: 'MADA',
         bonusVal: 'Up to $2,000 Extra',
         perks: ['Min. Deposit $50', '200% Match Ratio', 'Instant Account Credit']
       },
@@ -37,7 +37,7 @@ export class Bonus {
         tagClass: 'badge-stake',
         icon: '🔥',
         desc: 'Receive non-stop reload bonuses credited directly into your Stake vault every single day.',
-        code: 'BETMADA',
+        code: 'MADA',
         bonusVal: 'Daily Cash Boost',
         perks: ['Calculated on Recent Volume', 'Claimable Every 24h', 'VIP Bronze+ Unlocked']
       }
@@ -52,7 +52,7 @@ export class Bonus {
             </div>
             <h2 class="section-title">Claim Exclusive Stake VIP Perks</h2>
             <p class="section-description">
-              Activate promo code <strong class="text-stake font-mono">BETMADA</strong> upon registration to unlock instant rakeback, reload bonuses, and monthly leaderboard rewards.
+              Activate promo code <strong class="text-stake font-mono">MADA</strong> upon registration to unlock instant rakeback, reload bonuses, and monthly leaderboard rewards.
             </p>
           </div>
 

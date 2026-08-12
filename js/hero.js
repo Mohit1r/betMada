@@ -22,18 +22,18 @@ export class Hero {
             </div>
 
             <h1 class="hero-title">
-              Exclusive Rewards for <span class="text-gradient-purple">Stake & BETMADA</span> Users
+              Exclusive Rewards for <span class="text-gradient-purple">Stake & MADA</span> Users
             </h1>
 
             <p class="hero-subtitle">
-              Register on Stake using promo code <span class="text-purple font-mono" style="font-weight: 800;">BETMADA</span> to unlock <strong>15% Instant Rakeback</strong>, <strong>200% Deposit Bonus</strong>, plus automatic access to <strong>Daily Discord Drops</strong> and <strong>Weekly X Cash Giveaways</strong>!
+              Register on Stake using promo code <span class="text-purple font-mono" style="font-weight: 800;">MADA</span> to unlock <strong>15% Instant Rakeback</strong>, <strong>200% Deposit Bonus</strong>, plus automatic access to <strong>Daily Discord Drops</strong> and <strong>Weekly X Cash Giveaways</strong>!
             </p>
 
             <!-- Quick Code Copy Card -->
             <div class="hero-code-box glass-card">
               <div class="code-info">
                 <span class="code-label">EXCLUSIVE STAKE PROMO CODE</span>
-                <span class="code-val font-mono">BETMADA</span>
+                <span class="code-val font-mono">MADA</span>
               </div>
               <div class="code-actions">
                 <button class="btn btn-primary copy-promo-btn" data-code="MADA">
@@ -91,7 +91,7 @@ export class Hero {
                   <span class="dot yellow"></span>
                   <span class="dot green"></span>
                 </div>
-                <div class="card-title-tag font-mono">BETMADA_REWARDS_HUB</div>
+                <div class="card-title-tag font-mono">MADA_REWARDS_HUB</div>
                 <span class="badge badge-discord">LIVE DROPS</span>
               </div>
 
@@ -128,7 +128,7 @@ export class Hero {
                 <div class="streamer-profile">
                   <img src="assets/logo.jpg" class="footer-mascot-avatar">
                   <div class="profile-details">
-                    <span class="profile-name">BETMADA Community Hub</span>
+                    <span class="profile-name">MADA Community Hub</span>
                     <span class="profile-sub">Code: MADA Verified</span>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ export class Hero {
                 <span class="font-mono" style="background: var(--neon-purple); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">2</span>
                 <div>
                   <strong style="color: #fff;">Enter Code "MADA" in Code Box</strong>
-                  <p style="font-size: 0.85rem; color: var(--text-muted);">Check "Code (Optional)" during signup and enter <b>BETMADA</b>.</p>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Check "Code (Optional)" during signup and enter <b>MADA</b>.</p>
                 </div>
               </div>
               <div style="display: flex; gap: 1rem; align-items: flex-start;">
@@ -430,7 +430,7 @@ export class Hero {
               </div>
             </div>
             <a href="https://stake.com/?c=MADA" target="_blank" class="btn btn-stake btn-lg" style="width: 100%;">
-              Go to Stake & Register with BETMADA
+              Go to Stake & Register with MADA
             </a>
           </div>
         `);

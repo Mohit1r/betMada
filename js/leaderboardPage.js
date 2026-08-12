@@ -68,7 +68,7 @@ export class LeaderboardPage {
             <div class="lb-hero-content">
               <div class="hero-badge-row" style="justify-content: center;">
                 <span class="badge badge-gold">🏆 OFFICIAL STAKE WAGER RACE</span>
-                <span class="badge badge-purple">👑 CODE: BETMADA EXCLUSIVE</span>
+                <span class="badge badge-purple">👑 CODE: MADA EXCLUSIVE</span>
               </div>
 
               <h1 class="lb-hero-title">
@@ -76,7 +76,7 @@ export class LeaderboardPage {
               </h1>
 
               <p class="lb-hero-desc">
-                Wager on Stake.com using affiliate code <strong class="text-purple font-mono">BETMADA</strong> to climb the community leaderboard. Top 50 wagers automatically split $25,000 in raw crypto payouts!
+                Wager on Stake.com using affiliate code <strong class="text-purple font-mono">MADA</strong> to climb the community leaderboard. Top 50 wagers automatically split $25,000 in raw crypto payouts!
               </p>
 
               <!-- Race Countdown & Prize Highlight -->
@@ -223,7 +223,7 @@ export class LeaderboardPage {
               <div class="glass-card lb-info-card">
                 <span class="info-icon">1️⃣</span>
                 <h4>Register with Code MADA</h4>
-                <p>Sign up on Stake.com using referral code <b>BETMADA</b> to link your account to the BetMada leaderboard.</p>
+                <p>Sign up on Stake.com using referral code <b>MADA</b> to link your account to the BetMada leaderboard.</p>
               </div>
               <div class="glass-card lb-info-card">
                 <span class="info-icon">2️⃣</span>
@@ -672,7 +672,7 @@ export class LeaderboardPage {
             <div class="badge badge-gold" style="margin-bottom: 1rem;">STAKE USERNAME LOOKUP</div>
             <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Check Your Wager Rank</h3>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-              Enter your Stake username to check your current monthly wager leaderboard position under code <b>BETMADA</b>.
+              Enter your Stake username to check your current monthly wager leaderboard position under code <b>MADA</b>.
             </p>
 
             <form onsubmit="window.handleRankSearch(event)">

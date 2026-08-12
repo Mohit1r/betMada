@@ -4,7 +4,6 @@
 
 import { Navbar } from './navbar.js';
 import { Hero } from './hero.js';
-import { Bonus } from './bonus.js';
 import { Giveaways } from './giveaways.js';
 import { StakeReview } from './stakeReview.js';
 import { Footer } from './footer.js';
@@ -20,7 +19,7 @@ class BetMadaApp {
       <main>
         ${Hero.render()}
         ${RaffleTracker.render()}
-        ${Bonus.render()}
+        
         ${Giveaways.render()}
         ${StakeReview.render()}
       </main>
@@ -31,7 +30,7 @@ class BetMadaApp {
     Navbar.attachEvents();
     Hero.attachEvents();
     RaffleTracker.attachEvents();
-    Bonus.attachEvents();
+    
     Giveaways.attachEvents();
     StakeReview.attachEvents();
     Footer.attachEvents();

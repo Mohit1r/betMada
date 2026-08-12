@@ -58,7 +58,7 @@ export class Navbar {
             <span class="badge badge-discord">
               💬 DAILY DISCORD DROPS LIVE
             </span>
-            <span class="live-stream-title">🔥 EXCLUSIVE CASH DROPS FOR CODE <b>BETMADA</b> USERS & WEEKLY X DROPS!</span>
+            <span class="live-stream-title">🔥 EXCLUSIVE CASH DROPS FOR CODE <b>MADA</b> USERS & WEEKLY X DROPS!</span>
           </div>
           <div class="live-meta">
             <button class="btn btn-discord btn-sm" id="nav-join-discord-btn">💬 Join Discord</button>
@@ -293,7 +293,7 @@ export class Navbar {
     // Copy promo code triggers
     document.querySelectorAll('.copy-promo-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const code = btn.getAttribute('data-code') || 'BETMADA';
+        const code = btn.getAttribute('data-code') || 'MADA';
         navigator.clipboard.writeText(code).then(() => {
           sounds.playCopy();
           ModalManager.showToast(`Stake Code "${code}" Copied to Clipboard!`);
