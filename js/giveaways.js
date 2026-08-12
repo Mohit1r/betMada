@@ -34,7 +34,7 @@ export class Giveaways {
             </p>
           </div>
 
-          <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div style="max-width: 800px; margin: 0 auto;">
             
             <!-- Active Social Giveaway Cards -->
             <div class="giveaways-list">
