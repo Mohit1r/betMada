@@ -47,7 +47,7 @@ export class StakeReview {
           <div class="glass-card review-cta-banner">
             <div class="banner-content">
               <span class="badge badge-stake font-mono" style="margin-bottom: 0.75rem;">⚡ OFFICIAL STAKE PARTNER</span>
-              <h3 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Ready to Claim Your 200% Deposit Bonus?</h3>
+              <h3 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Ready to Claim Your VIP Perks?</h3>
               <p style="color: var(--text-secondary); max-width: 600px; margin-bottom: 1.5rem;">
                 Sign up on Stake.com using code <strong class="text-purple font-mono">MADA</strong> to activate instant rakeback, reload rewards, and entry into daily Discord drops.
               </p>

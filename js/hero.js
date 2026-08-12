@@ -26,7 +26,7 @@ export class Hero {
             </h1>
 
             <p class="hero-subtitle">
-              Register on Stake using promo code <span class="text-purple font-mono" style="font-weight: 800;">MADA</span> to unlock <strong>15% Instant Rakeback</strong>, <strong>200% Deposit Bonus</strong>, plus automatic access to <strong>Daily Discord Drops</strong> and <strong>Weekly X Cash Giveaways</strong>!
+              Register on Stake using promo code <span class="text-purple font-mono" style="font-weight: 800;">MADA</span> to unlock <strong>15% Instant Rakeback</strong>, plus automatic access to <strong>Daily Discord Drops</strong> and <strong>Weekly X Cash Giveaways</strong>!
             </p>
 
             <!-- Quick Code Copy Card -->
@@ -416,7 +416,7 @@ export class Hero {
             <img src="assets/logo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--neon-purple); box-shadow: 0 0 20px var(--neon-purple-glow); margin-bottom: 0.75rem;">
             <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">How to Register & Claim Bonus on Stake</h3>
             <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
-              Follow these simple steps to claim your 200% deposit bonus + 15% instant rakeback:
+              Follow these simple steps to claim your 15% instant rakeback + exclusive perks:
             </p>
             <div style="text-align: left; background: rgba(255,255,255,0.03); border: 1px solid var(--border-light); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem;">
               <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start;">
